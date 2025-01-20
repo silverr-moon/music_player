@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <drawable android:drawable="@drawable/song_list_bg" />
+    </item>
+    <item
+        android:gravity="center"> <!-- Center the music note on top -->
+        <drawable android:drawable="@drawable/baseline_music_note_24" />
+    </item>
+</layer-list>
