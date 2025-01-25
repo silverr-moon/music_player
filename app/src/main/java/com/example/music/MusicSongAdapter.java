@@ -1,6 +1,7 @@
 package com.example.music;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -46,7 +47,7 @@ public class MusicSongAdapter extends RecyclerView.Adapter<MusicSongAdapter.MyVi
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) { //i is position
         holder.file_name.setText(mFiles.get(position).getTitle());
         try{
             byte[] image=getSongsArt(mFiles.get(position).getPath());
@@ -70,6 +71,18 @@ public class MusicSongAdapter extends RecyclerView.Adapter<MusicSongAdapter.MyVi
         }catch (IOException e){
             e.printStackTrace();
         }
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int adapterposition=holder.getAdapterPosition();
+                if(adapterposition!=RecyclerView.NO_POSITION){
+                    Intent intent=new Intent(mcontext,PlayerActivity.class);
+                    intent.putExtra("position",adapterposition);
+                    mcontext.startActivity(intent);
+                }
+
+            }
+        });
 
 
     }
