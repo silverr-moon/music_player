@@ -113,7 +113,7 @@ public class PlayerActivity extends AppCompatActivity implements MediaPlayer.OnC
             public void onClick(View view) {
                 if(repeatBoolean){
                     repeatBoolean=false;
-                    repeatbtn.setImageResource(R.drawable.baseline_replay_24);
+                    repeatbtn.setImageResource(R.drawable.baseline_replaybtn);
                 }else{
                     repeatBoolean=true;
                     repeatbtn.setImageResource(R.drawable.baseline_replayon);

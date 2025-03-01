@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Album_details"
+    android:id="@+id/album_details"
+    android:background="@color/dark_brown">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/album_details_layout">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/top_btns_layout"
+            android:background="@color/dark_brown"
+            android:layout_alignParentTop="true"
+            >
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/back_btn"
+                android:src="@drawable/baseline_back"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"/>
+
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/baseline_more"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:id="@+id/menu_btn"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:id="@+id/card"
+            android:layout_below="@id/top_btns_layout"
+            android:background="@drawable/album_detail_grad"
+            >
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="70dp"
+                android:id="@+id/album_cover"
+                />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/frontalbum"
+            android:layout_below="@id/card"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:padding="4dp"
+                android:textColor="@color/white"
+                android:textStyle="italic"
+                android:id="@+id/artist_name"
+                android:layout_marginTop="24dp"
+                android:layout_marginLeft="10dp"
+                android:text="Artist:Name"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:padding="4dp"
+                android:textColor="@color/white"
+                android:textStyle="italic"
+                android:id="@+id/timespan"
+                android:layout_marginLeft="10dp"
+                android:text="Duration: 0hr 0min"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="15dp"
+                >
+                <FrameLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="30dp">
+
+                    <Button
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginRight="30dp"
+                        android:id="@+id/playalbumbtn"
+                        android:background="@drawable/playalbumbtnlay"
+                        android:backgroundTint="@null"
+                        android:clickable="true"/>
+                    <ImageView
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/baseline_playbtn"
+                        android:padding="5dp"/>
+                </FrameLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/albumlistrecycleview"
+            android:layout_below="@+id/frontalbum"/>
+
+    </RelativeLayout>
+
+</ScrollView>
+</RelativeLayout>
