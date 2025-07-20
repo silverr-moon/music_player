@@ -198,7 +198,7 @@
                 android:layout_height="35dp"
                 android:layout_centerVertical="true"
                 android:id="@+id/repeatbtn"
-                android:src="@drawable/baseline_replay_24"
+                android:src="@drawable/baseline_replaybtn"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="36dp"
                 />
